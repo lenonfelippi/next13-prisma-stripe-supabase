@@ -1,5 +1,6 @@
 import React from "react";
-import Trips from "./components/Trips";
+import TripsServerComponents from "./components/TripsServerComponents";
+import TripsUseClient from "./components/TripsUseClient";
 
 
 export const metadata = {
@@ -9,7 +10,10 @@ export const metadata = {
 const Page = () => {
   return (
     <div>
-      <Trips />
+      <TripsUseClient />
+      <hr />
+       {/* @ts-expect-error Server Component */}
+      <TripsServerComponents />
     </div>
   );
 };
